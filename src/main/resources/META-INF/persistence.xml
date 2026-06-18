@@ -6,6 +6,9 @@
     <persistence-unit name="u4-w3-d3pu">
         <class>MohamedJaouad.entities.User</class>
         <class>MohamedJaouad.entities.Event</class>
+        <class>MohamedJaouad.entities.d4.PartitaDiCalcio</class>
+        <class>MohamedJaouad.entities.d4.Concerto</class>
+        <class>MohamedJaouad.entities.d4.GaraDiAtletica</class>
         <class>MohamedJaouad.entities.Partecipazione</class>
         <class>MohamedJaouad.entities.Location</class>
         <properties>

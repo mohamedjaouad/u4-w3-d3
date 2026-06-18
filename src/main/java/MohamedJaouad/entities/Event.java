@@ -9,7 +9,12 @@ import java.util.UUID;
 
 @Entity
 @Table(name="events")
-public class Event {
+@Inheritance(strategy = InheritanceType.JOINED)
+@NamedQuery(name = "getPartiteVinteInCasa",
+        query = "SELECT p FROM PartitaDiCalcio p WHERE p.squadraVincente = p.squadraDiCasa")
+@NamedQuery(name = "getPartiteVinteInTrasferta",
+        query = "SELECT p FROM PartitaDiCalcio p WHERE p.squadraVincente = p.squadraOspite")
+public abstract class Event {
     @Id
     @GeneratedValue
     @Column(name="event_id")
